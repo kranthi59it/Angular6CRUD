@@ -1,0 +1,101 @@
+
+
+<form [formGroup]="employeeform" (ndsubmit)="onSubmit()" class="form-horizontal">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{pageTitle}}</h3>
+
+        </div>
+        <div class="panel-body">
+            <div class="form-group" [ngClass]="{'has-error' : employeeform.get('fullname').errors
+        && employeeform.get('fullname').touched || employeeform.get('fullname').dirty}">
+                <label class="col-sm-2 conrol-label" for="fullname" >Full Name</label>
+                <div class="col-sm-8">
+                    <input id="fullName" formControlName="fullname" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 conrol-label" for="email">Email</label>
+                <div class="col-sm-8">
+                    <input id="email" type="text" formControlName="email" class="form-control">
+                </div>
+            </div>
+            <div class="form-group" >
+                <label class="col-sm-2 conrol-label" for="Salary" >Salary</label>
+                <div class="col-sm-8">
+                    <input id="Salary" formControlName="Salary" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group" >
+                    <label class="col-sm-2 conrol-label" for="Age" >Age</label>
+                    <div class="col-sm-8">
+                        <input id="Age" formControlName="Age" type="text" class="form-control">
+                    </div>
+                </div>
+                
+<!-- <div formGroupName="skills">
+    <div class="form-group">
+                <label class="col-sm-2 conrol-label" for="skillName">Skill</label>
+                <div class="col-sm-4">
+                    <input id="skillName" type="text" placeholder="Name" formControlName="skillName" 
+                    class="form-control">
+                </div>
+                <div class="col-sm-4">
+                        <input id="skillName" type="text" placeholder="Experience In Years"
+                         formControlName="experienceInYears" 
+                        class="form-control">
+                    </div>
+                
+            </div> -->
+
+
+
+            <!-- <div class="form-group">
+                <label class="col-md2-2 conrol-label" >Proficiency</label>
+                <div class="col-md-8">
+                   <label class="radio-inline">
+                       <input id="Proficiency" type="radio" value="beginner" formControlName="Proficiency">
+                       Beginner
+                   </label>
+                   <label class="radio-inline">
+                    <input id="Proficiency" type="radio" value="intermediate" formControlName="Proficiency">
+                    Intermediate
+                </label>
+                <label class="radio-inline">
+                    <input id="Proficiency" type="radio" value="advanced" formControlName="Proficiency">
+Advanced
+                </label>
+                </div>
+            </div></div> -->
+
+        </div>
+    </div>
+
+    <div class="panel-footer">
+        <div class="btn-toolbar">
+        <button class="btn btn-primary" type="submit" (click)="onSubmit()"  >Save</button>
+        <button class="btn btn-primary" type="submit" > Cancel</button>
+    </div>
+    </div>
+</form>
+
+<!-- <table border="1">
+    <tr>
+        <th style="padding:10px">Form Group</th>
+        <th style="padding:10px">FormControl (fullName)</th>
+
+    </tr>
+    <td style="padding:10px">
+    touched : {{employeeform.touched}}
+    <br/> dirty : {{employeeform.dirty}}
+    <br/>valid :{{employeeform.valid}}
+    <br/> form Values : {{employeeform.value | json}}
+    </td>
+    <td style="padding:10px">
+            touched : {{employeeform.get(fullname).touched}}
+            <br/> dirty : {{employeeform.get(fullname).dirty}}
+            <br/>valid :{{employeeform.get(fullname).valid}}
+            <br/> Full Name   Values : {{employeeform.get(fullname).value }}
+            </td>
+</table> -->

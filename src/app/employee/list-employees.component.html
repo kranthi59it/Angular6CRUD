@@ -1,0 +1,32 @@
+<div class="table-responsive">
+    <table class="table table-bordered" >
+        <thead>
+
+            <tr class="bg-primary">
+                <th>Name : </th>
+                <th>Email : </th>
+                <th> salary : </th>
+                <th> Age :</th>
+                <th>Action </th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td style="display: none" class="hidden">{{employee.id}}</td>
+                        <td>{{employee.fullname}}</td>
+                        <td>{{employee.email}}</td>
+                        <td>{{employee.Salary}}</td>
+                        <td>{{employee.Age}}</td>
+
+                        <td><button class="btn btn-primary"  (click)="editButtonClick(employee.id)">Edit</button></td>
+                        <td><button *ngIf="!ConfirmDelete" class="btn btn-primary"  (click)="ConfirmDelete=true">Delete</button></td>
+<span *ngIf="ConfirmDelete">
+<span> Are you sure You Want to Delete?</span>
+<button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Yes</button>
+<button class="btn btn-primary" (click)="ConfirmDelete=false">No</button>
+
+</span>
+                    </tr>
+        </tbody>
+    </table>
+    </div>

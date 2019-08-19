@@ -1,0 +1,26 @@
+{"employees" : [
+    {
+      "id" :1,
+      "fullname" : "siva",
+        "email" :  "s@g.com",
+        "skills" :[{
+          "skillName" : ".NET",
+          "experienceInYears" : 8,
+          "Proficiency" : "Beginner"
+        }] 
+          
+  },
+  {
+    "id" :2,
+    "fullname" : "siva",
+      "email" :  "s@g.com",
+      "skills" :[{
+        "skillName" : ".NET",
+        "experienceInYears" : 8,
+        "Proficiency" : "Beginner"
+      }] 
+        
+  }
+  ] 
+  }
+  
